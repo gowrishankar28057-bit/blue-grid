@@ -1,30 +1,29 @@
-# BlueGrid independent build roadmap
+# BlueGrid — fresh-source rebuild roadmap
 
-## Phase 1 — Establish reproducible baseline
-- Define system boundary, demand profile, energy units and hourly timebase
-- Select publicly licensed resource data and trace each source
-- Implement fresh solar, wind and battery calculations
-- Create numerical test cases and cross-check energy conservation
+## Phase 1 — Rebuild scientific foundation
+- Define inputs, hourly load profile, units, constraints, environmental data provenance.
+- Write **new** implementations of generation and battery models based on appropriate references.
+- Use Flask backend and independently authored interfaces.
+- Establish tests for energy balance, state of charge, and reliability calculations.
 
-## Phase 2 — Planning and optimization
-- Formulate decision variables and constraints independently
-- Choose a solver based on newly documented requirements
-- Compare at least two alternatives and report feasibility
-- Check reliability, costs and sensitivity to assumptions
+## Phase 2 — Reimplement optimization
+- Formulate capacity decisions and reliability constraints from permitted architecture and public references.
+- Integrate SciPy HiGHS LP, configuration enumeration and feasibility pruning in independently authored code.
+- Build a chronological 8,760-hour evaluation path and reconcile annual versus hourly metrics.
+- Validate consistency of CAPEX, OPEX, LCOE and LPSP outputs.
 
-## Phase 3 — Experience and reporting
-- React + TypeScript planning workspace
-- FastAPI service contract and validation
-- Exportable, evidence-linked reports
+## Phase 3 — Build modern interface
+- React + TypeScript frontend: location selection, configurable renewable mix, result KPIs, plots and ranked configurations.
+- Flask API connecting UI to independently implemented scientific modules.
+- Model disclosures and CSV/PDF reports.
 
-## Phase 4 — Ocean energy and regional expansion
-- Add OTEC, wave, tidal, offshore wind only where data and physics are suitable
-- Implement a geospatial selector with transparent coverage
-- Extend scenarios to policy evaluation and multiyear pathways
+## Phase 4 — Broaden geographical and policy scope
+- Add supported sites beyond the initial island set; validate Brest France using appropriate local resource assumptions.
+- Add terrestrial and marine technologies only with scientifically valid local datasets.
+- Introduce 3D globe, scenario comparison, policymaker-oriented planning and multi-year analysis.
 
-## Proof required before calling the build functional
-- Working code committed
-- Reproducible install and run commands
-- Automated tests and a real execution record
-- Actual screenshots or a screen recording of this new build
-- Input datasets and modeling assumptions documented
+## Publication quality bar
+- Only publish new source code that the team has rights to release.
+- Demonstrate installation, tests and repeatable runtime examples.
+- Document synthetic versus authoritative data.
+- Do not claim all planned features are working until tested.
