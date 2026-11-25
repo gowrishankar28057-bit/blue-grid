@@ -1,24 +1,20 @@
-# Independent development and rights boundaries
+# BlueGrid — source code handover and independent rebuild
 
-The new BlueGrid project is intended to be developed independently.
+## What the team reports as permitted
+The original project's source code was handed over to the mentor/institution. The team reports permission to pursue the **same underlying idea, architecture, mathematical formulation and algorithms** in a new project by independently writing the implementation.
 
-## Do not import from the earlier project without separate written authorization
+**Architecture reuse is not the same as copying old source code.** The reimplementation may follow the earlier conceptual component boundaries and workflow while producing fresh code, tests, documentation and datasets.
 
-- Original source code or modified copies of it
-- Original project-specific system architecture, database schema, or internal APIs
-- Nonpublic project manuals, diagrams, datasets, unpublished research, or credentials
-- Unlicensed photographs, presentation elements, logos, or protected figures
+## What to preserve as a boundary
+- Do not copy, paste, port or upload the handed-over source code into this new repository.
+- Do not publish credentials or confidential/institutional data.
+- Check rights before reusing original documents, figures, private datasets, third-party media or branding; permission to pursue an idea does not necessarily grant rights to every related artifact.
+- Attribute scientific equations and datasets where appropriate.
 
-## Allowed development process, subject to permission and applicable agreements
+## Implementation practice
+- Use familiar technical approaches (Flask backend, data processing, physical generation models, deterministic solver, hourly BESS analysis) where appropriate.
+- Write independent new source and tests, and record provenance of references.
+- Validate models and numerical claims independently.
+- Seek written confirmation of the scope of permission if institutional agreements or public distribution impose conditions.
 
-- Define the independently usable problem statement and requirements.
-- Consult public scientific literature and properly licensed datasets.
-- Write fresh software, interfaces, tests, models and architecture.
-- Maintain citations, dependency licenses and data provenance.
-- Keep a clear change history documenting independently authored work.
-
-## Before releasing publicly
-
-Review any institutional agreement and seek written clarification about which idea, names, documents, datasets and outputs can be used. A mentor's verbal permission should not be treated as blanket IP clearance.
-
-This repository intentionally starts without the earlier project's code or private technical documentation.
+This documentation explains the team's understanding of the arrangement; it is not a legal determination of ownership.
