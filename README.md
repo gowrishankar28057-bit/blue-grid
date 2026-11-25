@@ -1,62 +1,45 @@
 # BlueGrid
 
-**An independently developed renewable-energy planning platform for coastal, island, residential, industrial, and regional applications.**
+**Renewable energy and Blue Economy decision-support platform — independently reimplemented from a previously explored technical concept.**
 
-> **Project status:** Independent rebuild in progress. This repository is not a copy of any earlier project or its source code. Published files should be reviewed and tested before treating them as production-ready.
+> **Status:** The earlier prototype source code has been handed over and is **not included** in this repository. This repository is a fresh implementation workstream. Technical methodology and architecture can be reconstructed from scratch, subject to the team's stated permission and any applicable agreements. Executable code has not yet been published here.
 
-## The challenge
+## Problem
+Renewable-energy planning requires evaluating local resources, technology capacity, battery storage, investment cost, electrical reliability, emissions, and seasonal variability. Island and coastal environments also offer potentially useful ocean-energy resources.
 
-Planning renewable energy infrastructure means evaluating generation capacity, storage, seasonal resource variability, operating conditions, investment cost, reliability, and environmental effects. These trade-offs are especially demanding for island and coastal systems that may consider blue renewable energy alongside land-based technologies.
+## BlueGrid approach
+1. Select a supported location, define load and environmental inputs.
+2. Evaluate physics-informed renewable generation and battery performance.
+3. Explore hybrid configurations using deterministic, reproducible mathematical optimization.
+4. Run chronological energy dispatch and calculate costs, unmet demand, and carbon estimates.
+5. Compare alternatives for developers, policymakers, utilities, investors and communities.
 
-## Our direction
+## Engineering architecture — independent reimplementation
+The **same general scientific workflow and architecture** explored in the earlier project may be used again; this is **not an import of the original source code**.
 
-BlueGrid aims to provide a scientifically grounded decision-support workflow:
-
-1. Choose a site or geographical area.
-2. Define electricity-demand assumptions and planning constraints.
-3. Select renewable technologies and energy storage options.
-4. Evaluate energy-resource scenarios with independently written, documented physical models.
-5. Compare alternative system configurations on investment cost, electricity cost, reliability, and emissions.
-6. Explain model limitations, assumptions, uncertainties, and decision trade-offs.
-
-## Intended users
-
-Renewable energy developers and investors; policymakers and planning authorities; utilities and microgrid operators; industry; coastal and island communities; researchers and individual consumers.
-
-## Independent implementation plan
-
-This repository will use an original, modular design rather than reusing an earlier project's source or architecture.
-
-| Layer | New design direction |
+| Layer | Planned independently written implementation |
 | --- | --- |
-| User interface | React + TypeScript, interactive geographic exploration and scenario workspaces |
-| Service API | Python FastAPI with explicit request/response schemas |
-| Resource data | Independently sourced, attributable weather/ocean datasets and provenance records |
-| Technology modules | Independently implemented, versioned generation/storage models |
-| Scenario engine | Explicit scenario definitions, numerical simulation, sensitivity checks |
-| Decision support | Cost, reliability, carbon and uncertainty-aware comparisons |
-| Quality | Unit tests, input validation, dataset provenance, reproducibility checks |
+| Interface | React + TypeScript, site selection, resource and planning dashboard |
+| Backend | Python + Flask, documented API endpoints |
+| Data processing | NumPy and Pandas, source-provenance metadata |
+| Resource models | Solar, wind, OTEC, wave, BESS and other validated renewable modules |
+| Mathematical optimization | SciPy HiGHS linear programming, configuration search and feasibility checks |
+| Operational evaluation | Hourly chronological storage dispatch and reliability analysis |
+| Reporting | Costs (CAPEX, OPEX, LCOE), LPSP, emissions estimates and evidence-linked exports |
+| Quality | Automated tests, physics/unit checks and transparent modeling assumptions |
 
-These are development targets, **not a claim that every feature is already working in this repository**.
+These are implementation goals for this new repository, not a claim that all features are already present or verified.
 
-## Current repository scope
+## Geographic and technology expansion
+The product vision includes island, coastal, industrial, residential and regional planning; Earth-based location selection, modular technology expansion, future policy scenarios and multi-year pathways require fresh implementation and validation for each geography.
 
-This initial commit documents the independently developed project direction and engineering boundaries. Application source, validated datasets, test evidence, and a runnable deployment will be added as they are built and verified.
+## What's currently in this repository?
+Project planning documents. **No runnable application has been committed yet.**
 
-## Scientific integrity and limitations
+## Rights and provenance
+The original project code was handed over to the relevant mentor/institution. We will write new code without copying or importing that handover. Architecture and scientific ideas may be independently implemented consistent with the permission reported by the team. External documentation, private data and third-party materials require their own reuse rights; source attribution and license review remain necessary.
 
-- The presence of a methodology description is not evidence that a functioning optimizer has been committed.
-- Any sample inputs or results must be identified as synthetic unless traceable to validated data sources.
-- Renewable resource availability and financial results have uncertainty.
-- Technology modules require geography-appropriate physical validation.
-- A deterministic result for fixed inputs is not a guarantee of predictive accuracy or global optimality.
-
-## Development documents
-
-- [Scope and success criteria](docs/PROJECT_SCOPE.md)
-- [Independent-development boundaries](docs/INDEPENDENT_DEVELOPMENT.md)
+## Documentation
+- [Scope](docs/PROJECT_SCOPE.md)
+- [Code and rights boundaries](docs/INDEPENDENT_DEVELOPMENT.md)
 - [Build roadmap](docs/BUILD_ROADMAP.md)
-
-## License
-
-License and reuse terms will be decided only after confirming rights to independently authored content and any external dependencies. No previously handed-over code or private project documentation is included here.
